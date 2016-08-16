@@ -63,7 +63,8 @@ $googlebot_crawl = array('codes' => array(), 'exts' => array(), 'dates' => array
 // the first part gives a key used for reporting the area, the second is the regex to match with agains the URL path
 $regexes = array(
 	'Fly Me to the Moon' => '/^\/fly-me-to-the-moon.+/',
-	'Parameter URIs' => '/^.+\?.+/'
+	'Parameters' => '/^.+\?.+/',
+	'UTM' => '/^.+[&|\?]utm_.+/'
 );
 
 foreach ($log_lines as $line) {
