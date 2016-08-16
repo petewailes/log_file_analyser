@@ -1,0 +1,1 @@
+A basic log file anayser created for a blog post for Moz
