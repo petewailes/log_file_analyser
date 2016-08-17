@@ -119,12 +119,10 @@ foreach ($log_lines as $line) {
 	}
 }
 
-foreach ($googlebot_crawl['codes'] as $code => $code_data) {
-	arsort($googlebot_crawl['codes'][$code]['urlPaths']);
-}
-
-foreach ($googlebot_crawl['regexes'] as $name => $name_data) {
-	arsort($googlebot_crawl['regexes'][$name]['urlPaths']);
+foreach (array('codes', 'exts', 'regexes') as $type) {
+	foreach ($googlebot_crawl[$type] as $subtype => $code_data) {
+		arsort($googlebot_crawl[$type][$subtype]['urlPaths']);
+	}
 }
 ?>
 <!DOCTYPE html>
